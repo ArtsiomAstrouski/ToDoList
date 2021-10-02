@@ -1,4 +1,3 @@
-import './App.css'
 import { useState } from 'react'
 import ToDo from './components/ToDo'
 import ToDoForm from './components/ToDoForm'
@@ -9,7 +8,7 @@ function App() {
 	const addTask = userInput => {
 		if (userInput) {
 			const newItem = {
-				id: Date.now().toString(),
+				id: Math.random().toString(36).substr(2, 9),
 				task: userInput,
 				complete: false,
 			}
@@ -30,7 +29,7 @@ function App() {
 	}
 
 	return (
-		<div>
+		<div className="App">
 			<header>
 				<h1>Список задач: {todos.length}</h1>
 			</header>

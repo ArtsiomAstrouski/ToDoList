@@ -20,16 +20,18 @@ function ToDoForm({ addTask }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input
-				value={userInput}
-				type="text"
-				onChange={handleChange}
-				onKeyDown={handleKeyPress}
-				placeholder="Введите значение..."
-			/>
-			<button>Сохранить</button>
-		</form>
+		<>
+			<form onSubmit={handleSubmit}>
+				<input
+					value={userInput}
+					type="text"
+					onChange={handleChange}
+					onKeyDown={handleKeyPress}
+					placeholder="Введите значение..."
+				/>
+				<button>Сохранить</button>
+			</form>
+		</>
 	)
 }
 

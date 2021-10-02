@@ -1,13 +1,13 @@
 function ToDo({ todo, toggleTask, removeTask }) {
 	return (
-		<div key={todo.id} className="style1">
+		<div key={todo.id} className="item-todo">
 			<div
-				className={todo.complete ? 'style1' : 'style2'}
+				className={todo.complete ? 'item-text strike' : 'item-text'}
 				onClick={() => toggleTask(todo.id)}
 			>
 				{todo.task}
 			</div>
-			<div className="style-delete" onClick={() => removeTask(todo.id)}>
+			<div className="item-delete" onClick={() => removeTask(todo.id)}>
 				X
 			</div>
 		</div>
